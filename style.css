@@ -1,0 +1,186 @@
+*, ::after , ::before{
+    margin: 0%;
+    padding:0%;
+    
+}
+
+body{
+    background-color: hsl(185, 75%, 39%);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    
+}
+
+.card{
+    position: relative;
+    display:grid;
+    max-width: 400px;
+    padding: 0;
+    grid-template-columns: 375px;
+    grid-template-rows: 150px 0px 150px 100px;
+    grid-template-areas: 
+    "top"
+    "picture"
+    "content"
+    "footercard";
+    border-radius: 15px;
+    align-self: center;
+    z-index: 3;
+}
+
+.top{
+    grid-area: top;
+    background: url(./images/bg-pattern-card.svg);
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.information{
+    grid-area: content;
+    display: grid;
+    background-color:#ffffff;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(3, 33.33%);
+    grid-template-areas: 
+    ". . . "
+    "name name age"
+    ". city .";
+    font-family: 'Kumbh Sans', sans-serif;
+    
+}
+
+div.footercard{
+    grid-area: footercard;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "followerNumber likeNumber pictureNumber"
+    "Follower like picture";
+    border-top: 1px solid;
+    font-family: 'Kumbh Sans', sans-serif;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.profilPicture{
+    grid-area: picture;
+    position:relative;
+    width: 100px;
+    height: 100px;
+    border: 3px solid white;
+    border-radius: 100%;
+    background: url(./images/image-victor.jpg);
+    background-size: cover;
+    top: -50px;
+    display: flex;
+    justify-self: center;
+}
+
+.name{
+    grid-area: name;
+    text-align: end;
+    padding-right: 10px;
+    padding-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+.age{
+    grid-area: age;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    color: hsl(227, 10%, 46%)
+}
+
+.city{
+    grid-area: city;
+    text-align: center;
+    font-weight: 400;
+    color: hsl(227, 10%, 46%)
+    
+}
+
+.followerNumbers{
+    grid-area: followerNumber;
+}
+
+.likeNumber{
+    grid-area: likeNumber;
+}
+
+.photoNumber{
+    grid-area: pictureNumber;
+}
+
+.followers{
+    grid-area: Follower;
+
+}
+
+.likes{
+ grid-area: like;
+}
+
+.photos{
+    grid-area: picture;
+}
+
+.type{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-weight: 400;
+    font-size: small;
+    color: hsl(227, 10%, 46%);
+    
+
+}
+
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.attribution{
+    height: 20px;
+    padding-top: 20px;
+}
+
+.backgroundTop{
+    position: absolute;
+    rotate: 180deg;
+    top:0%;
+    left: 0%;
+    width: 50%;
+    height: 50%;
+    padding: 0px;
+    filter: saturate(10);
+    overflow: hidden;
+    opacity: 50%;
+    z-index: 1;
+}
+
+.backgroundBottom{
+    position: absolute;
+    bottom:0%;
+    right: 0%;
+    width: 50%;
+    height: 50%;
+    filter: saturate(5);
+    opacity: 50%;
+    overflow: hidden;
+    z-index: 2;
+}
